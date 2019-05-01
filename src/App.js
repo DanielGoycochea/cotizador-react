@@ -3,6 +3,7 @@ import Header from './Component/Header'
 import Formulario from './Component/Formulario'
 import{obtenerDiferenciaAnio, calcularMarca, obtenerPlan} from './Helpers'
 import Resumen from './Component/Resumen'
+import {MDBContainer} from 'mdbreact'
 import './App.css';
 
 
@@ -53,19 +54,20 @@ class App extends Component {
   render() {
     return (
       <div className= 'Container'>
-        <Header titulo='Cotizador de Auto'/>
-        <div>
-          <Formulario
-          cotizarSeguro={this.cotizarSeguro}
-          />
-        </div>
-        <div>
-          <Resumen 
-          datos={this.state.datos}
-          resultado={this.state.resultado}
-          />
-        </div>
-
+        <MDBContainer>
+            <Header titulo='Cotizador de Auto'/>
+            <div>
+              <Formulario
+              cotizarSeguro={this.cotizarSeguro}
+              />
+            </div>
+            <div>
+              <Resumen 
+              datos={this.state.datos}
+              resultado={this.state.resultado}
+              />
+            </div>
+        </MDBContainer>
       </div>
     );
   }

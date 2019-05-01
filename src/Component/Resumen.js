@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {primeraMayuscula} from '../Helpers'
 import Resultado  from "./Resultado";
+import {MDBListGroup, MDBListGroupItem} from 'mdbreact'
 
 class Resumen extends Component {
     
@@ -13,14 +14,14 @@ class Resumen extends Component {
         return(
             
 
-            <div>
+            <MDBListGroup style={{ width: "22rem" }}>
                 <h2>Resumen de Cotizacion</h2>
-                <li>Marca: {primeraMayuscula (marca)}</li>
-                <li>Año del Auto: {year}</li>
-                <li>Plan: {primeraMayuscula(plan)}</li>
+                <MDBListGroupItem>Marca: {primeraMayuscula (marca)}</MDBListGroupItem>
+                <MDBListGroupItem>Año del Auto: {year}</MDBListGroupItem>
+                <MDBListGroupItem>Plan: {primeraMayuscula(plan)}</MDBListGroupItem>
 
 
-            </div>
+            </MDBListGroup>
         )
     }
 
